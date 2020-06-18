@@ -19,6 +19,7 @@
       true,
       "element",
       "app",
+      "agp",
       "kebab-case"
     ],
     "import-blacklist": [

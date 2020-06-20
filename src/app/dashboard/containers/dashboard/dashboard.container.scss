@@ -1,0 +1,10 @@
+:host {
+  .dashboard {
+    height: 100%;
+
+    &__toolbar {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

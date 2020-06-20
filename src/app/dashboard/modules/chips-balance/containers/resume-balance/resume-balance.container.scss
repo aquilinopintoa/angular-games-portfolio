@@ -1,0 +1,11 @@
+:host {
+  .resume-balance {
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    &__balance {
+      flex: 1;
+    }
+  }
+}

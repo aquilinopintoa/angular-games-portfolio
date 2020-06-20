@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChipsContainer } from './chips.container';
+import { ResumeBalanceContainer } from './resume-balance.container';
 
-describe('ChipsComponent', () => {
-  let component: ChipsContainer;
-  let fixture: ComponentFixture<ChipsContainer>;
+describe('ResumeBalanceContainer', () => {
+  let component: ResumeBalanceContainer;
+  let fixture: ComponentFixture<ResumeBalanceContainer>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChipsContainer ]
+      declarations: [ ResumeBalanceContainer ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChipsContainer);
+    fixture = TestBed.createComponent(ResumeBalanceContainer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

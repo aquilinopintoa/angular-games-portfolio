@@ -1,0 +1,11 @@
+<div class="resume-balance">
+  <div class="resume-balance__balance">
+    {{balance | async}}
+  </div>
+  <button
+    mat-icon-button
+    color="primary"
+    (click)="incrementBalance()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

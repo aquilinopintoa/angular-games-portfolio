@@ -1,12 +1,21 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "no-trailing-whitespace": [true, "ignore-blank-lines"],
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ]
+    },
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
       "severity": "warning"
     },
-    "component-class-suffix": true,
+    "component-class-suffix": [true, "Component", "Container"],
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "directive-selector": [

@@ -1,2 +1,24 @@
-<p>dashboard works!</p>
-<router-outlet></router-outlet>
+<mat-drawer-container class="dashboard" [hasBackdrop]="true">
+  <mat-drawer #drawer
+              mode="over"
+              position="end">
+    <mat-toolbar class="dashboard__toolbar">
+      <button mat-icon-button
+              (click)="drawer.toggle()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="dashboard__toolbar">
+      <div>
+        <agp-resume-balance></agp-resume-balance>
+      </div>
+      <button mat-icon-button
+              (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

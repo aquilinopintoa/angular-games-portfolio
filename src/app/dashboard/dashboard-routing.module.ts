@@ -9,12 +9,12 @@ const routes: Routes = [
     component: DashboardContainer,
     children: [
       {
-        path: 'chips',
-        loadChildren: () => import('../chips/chips.module').then(m => m.ChipsModule)
-      },
-      {
         path: 'games',
         loadChildren: () => import('../games/games.module').then(m => m.GamesModule)
+      },
+      {
+        path: 'chips-balance',
+        loadChildren: () => import('../chips-balance-details/chips-balance-details.module').then(m => m.ChipsBalanceDetailsModule)
       },
       {
         path: '',

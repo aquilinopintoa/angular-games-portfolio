@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ChipsBalanceService} from '../../dashboard/modules/chips-balance/services/chips-balance/chips-balance.service';
+import {ChipsBalanceService} from '../../../services/chips-balance/chips-balance.service';
 import {select, Store} from '@ngrx/store';
-import {State} from '../../dashboard/modules/chips-balance/+state/reducers/chips-balance.reducer';
-import {selectFeatureBalance} from '../../dashboard/modules/chips-balance/+state/selectors/chips-balance.selectors';
+import {State} from '../../../+state/reducers/chips-balance.reducer';
+import { selectFeatureBalance } from '../../../+state/selectors/chips-balance.selectors';
 
 @Component({
   selector: 'agp-chips-balance-details',

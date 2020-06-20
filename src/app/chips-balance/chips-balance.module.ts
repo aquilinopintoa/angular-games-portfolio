@@ -5,6 +5,7 @@ import { ResumeBalanceContainer } from './containers/resume-balance/resume-balan
 import { StoreModule } from '@ngrx/store';
 import * as fromChipsBalance from './+state/reducers/chips-balance.reducer';
 import { MatButtonModule, MatIconModule } from '@angular/material';
+import { ChipsBalanceRoutingModule } from './chips-balance-routing.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MatButtonModule, MatIconModule } from '@angular/material';
   ],
   imports: [
     CommonModule,
+    ChipsBalanceRoutingModule,
     StoreModule.forFeature(fromChipsBalance.chipsBalanceFeatureKey, fromChipsBalance.reducer),
     MatIconModule,
     MatButtonModule

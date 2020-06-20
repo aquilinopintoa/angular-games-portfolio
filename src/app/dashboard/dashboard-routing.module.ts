@@ -14,7 +14,8 @@ const routes: Routes = [
       },
       {
         path: 'chips-balance',
-        loadChildren: () => import('../chips-balance-details/chips-balance-details.module').then(m => m.ChipsBalanceDetailsModule)
+        loadChildren:
+          () => import('../chips-balance/chips-balance.module').then(m => m.ChipsBalanceModule)
       },
       {
         path: '',

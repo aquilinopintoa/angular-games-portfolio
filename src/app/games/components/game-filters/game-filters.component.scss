@@ -1,0 +1,10 @@
+:host {
+  .game-filters{
+    display: flex;
+    justify-content: center;
+
+    mat-form-field {
+      padding: 8px;
+    }
+  }
+}

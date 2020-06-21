@@ -9,6 +9,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import {MatCardModule, MatIconModule, MatInputModule} from '@angular/material';
 import { GameFiltersComponent } from './components/game-filters/game-filters.component';
 import { GameDetailsContainer } from './containers/game-details/game-details.container';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { GameDetailsContainer } from './containers/game-details/game-details.con
     MatCardModule,
     MatInputModule,
     MatIconModule,
+    ReactiveFormsModule,
   ]
 })
 export class GamesModule { }

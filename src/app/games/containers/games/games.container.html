@@ -1,5 +1,5 @@
 <div class="games">
-  <agp-game-filters></agp-game-filters>
+  <agp-game-filters (contextChanged)="contextChangeHandler($event)"></agp-game-filters>
   <div class="games__card-wrapper">
     <agp-game-card *ngFor="let game of games | async" [game]="game"
                     (click)="goToGameDetails(game.id)">

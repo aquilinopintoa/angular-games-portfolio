@@ -6,5 +6,11 @@
       display: flex;
       justify-content: flex-end;
     }
+
+    &__content {
+      overflow: auto;
+      // todo :: improve this
+      height: calc(100% - 56px);
+    }
   }
 }

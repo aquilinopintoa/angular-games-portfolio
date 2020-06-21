@@ -4,6 +4,7 @@ import { select, Store } from '@ngrx/store';
 import { State } from '../../+state/reducers/chips-balance.reducer';
 import { selectFeatureBalance } from '../../+state/selectors/chips-balance.selectors';
 import { increment } from '../../+state/actions/chips-balance.actions';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'agp-resume-balance',
@@ -16,14 +17,15 @@ export class ResumeBalanceContainer implements OnInit {
 
   constructor(
     private _chipsBalance: ChipsBalanceService,
-    private _store: Store<State>
+    private _store: Store<State>,
+    private _router: Router
   ) { }
 
   ngOnInit() {
   }
 
-  incrementBalance(): void {
-    this._store.dispatch(increment({value: 500}));
+  goToDetails(): void {
+    this._router.navigate(['/chips-balance']);
   }
 
 }

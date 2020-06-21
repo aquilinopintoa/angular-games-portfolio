@@ -3,6 +3,7 @@ import {ChipsBalanceService} from '../../../services/chips-balance/chips-balance
 import {select, Store} from '@ngrx/store';
 import {State} from '../../../+state/reducers/chips-balance.reducer';
 import { selectFeatureBalance } from '../../../+state/selectors/chips-balance.selectors';
+import {increment} from '../../../+state/actions/chips-balance.actions';
 
 @Component({
   selector: 'agp-chips-balance-details',
@@ -19,6 +20,10 @@ export class ChipsBalanceDetailsContainer implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  requestChips() {
+    this._store.dispatch(increment({value: 500}));
   }
 
 }

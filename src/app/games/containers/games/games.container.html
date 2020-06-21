@@ -1,1 +1,8 @@
-<p>{{games | async | json}}</p>
+<div class="games">
+  <agp-game-filters></agp-game-filters>
+  <div class="games__card-wrapper">
+    <agp-game-card *ngFor="let game of games | async" [game]="game"
+                    (click)="goToGameDetails(game.id)">
+    </agp-game-card>
+  </div>
+</div>

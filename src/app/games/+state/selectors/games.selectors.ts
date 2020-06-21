@@ -9,3 +9,8 @@ export const selectFeatureGames = createSelector(
   selectGamesState,
   (state: fromGames.State) => state.games
 );
+
+export const selectFeatureGame = createSelector(
+  selectGamesState,
+  (state: fromGames.State, id: string) => state.games.find((game) => game.id === id)
+);

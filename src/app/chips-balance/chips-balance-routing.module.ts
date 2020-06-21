@@ -11,7 +11,8 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'details'
+        redirectTo: 'details',
+        pathMatch: 'prefix'
       }
     ]
   },

@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResumeBalanceContainer } from './resume-balance.container';
+import {CommonModule} from '@angular/common';
+import {MatButtonModule, MatIconModule} from '@angular/material';
+import {provideMockStore} from '@ngrx/store/testing';
+import {initialState} from '../../+state/reducers/chips-balance.reducer';
+
+// todo :: review error with mdi icons
 
 describe('ResumeBalanceContainer', () => {
   let component: ResumeBalanceContainer;
@@ -8,7 +14,20 @@ describe('ResumeBalanceContainer', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResumeBalanceContainer ]
+      declarations: [ ResumeBalanceContainer ],
+      imports: [
+        CommonModule,
+
+        MatIconModule,
+        MatButtonModule
+      ],
+      providers: [
+        provideMockStore({
+          initialState: {
+            chipsBalance: initialState
+          }
+        }),
+      ]
     })
     .compileComponents();
   }));

@@ -4,9 +4,13 @@ import { selectChipsBalanceState } from './chips-balance.selectors';
 describe('ChipsBalance Selectors', () => {
   it('should select the feature state', () => {
     const result = selectChipsBalanceState({
-      [fromChipsBalance.chipsBalanceFeatureKey]: {}
+      [fromChipsBalance.chipsBalanceFeatureKey]: {
+        balance: 0
+      }
     });
 
-    expect(result).toEqual({});
+    expect(result).toEqual({
+      balance: 0
+    });
   });
 });

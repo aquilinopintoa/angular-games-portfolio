@@ -10,11 +10,9 @@
   </mat-form-field>
   <mat-form-field class="game-filters__sort">
     <mat-label>Ordenar por</mat-label>
-    <select matNativeControl
-            formControlName="sort"
-    >
-      <option value="name">Nombre</option>
-      <option value="level">Nivel</option>
-    </select>
+    <mat-select formControlName="sort">
+      <mat-option value="name">Nombre</mat-option>
+      <mat-option value="level">Nivel</mat-option>
+    </mat-select>
   </mat-form-field>
 </form>

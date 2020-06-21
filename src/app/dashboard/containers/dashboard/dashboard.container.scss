@@ -2,15 +2,46 @@
   .dashboard {
     height: 100%;
 
+    &__balance-resume-wrapper {
+      margin: 0px 24px;
+      cursor: pointer;
+    }
+
     &__toolbar {
+      height: 56px;
       display: flex;
       justify-content: flex-end;
+      background-color: #3f51b5;
+      color: white;
+
     }
 
     &__content {
       overflow: auto;
       // todo :: improve this
       height: calc(100% - 56px);
+      background-color: whitesmoke;
+    }
+
+    &__sidenav {
+      background-color: #3f51b5;
+      color: white;
+      min-width: 320px;
+
+      mat-nav-list {
+        padding-top: 0px;
+        a {
+          color: white;
+        }
+      }
+
+      .mat-subheader {
+        color: white;
+      }
+    }
+
+    &__social-links {
+      padding: 8px 0px;
     }
   }
 }

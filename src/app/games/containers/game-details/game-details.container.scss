@@ -1,0 +1,15 @@
+:host {
+ .game-details {
+   &__img {
+     img {
+       width: 100%;
+       height: 100%;
+     }
+     height: 30vh;
+   }
+   &__details {
+     padding: 8px;
+     text-transform: capitalize;
+   }
+ }
+}

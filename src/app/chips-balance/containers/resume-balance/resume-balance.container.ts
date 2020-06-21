@@ -18,14 +18,8 @@ export class ResumeBalanceContainer implements OnInit {
   constructor(
     private _chipsBalance: ChipsBalanceService,
     private _store: Store<State>,
-    private _router: Router
   ) { }
 
   ngOnInit() {
   }
-
-  goToDetails(): void {
-    this._router.navigate(['/chips-balance']);
-  }
-
 }

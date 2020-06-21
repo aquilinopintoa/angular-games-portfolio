@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@mdi/angular-material": "^5.3.45",
     "@ngrx/effects": "^9.2.0",
     "@ngrx/store": "^8.6.0",
     "@ngrx/store-devtools": "^9.2.0",

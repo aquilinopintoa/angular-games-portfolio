@@ -7,10 +7,17 @@
       flex-wrap: wrap;
     }
 
+    mat-grid-tile {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s linear;
 
-    agp-game-card {
-      padding: 8px;
-      cursor: pointer;
+
+      agp-game-card {
+        padding: 8px;
+        cursor: pointer;
+      }
     }
+
   }
 }

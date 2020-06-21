@@ -5,20 +5,21 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardContainer } from './containers/dashboard/dashboard.container';
 import { ChipsBalanceModule } from '../chips-balance/chips-balance.module';
 import {ChipsBalanceService} from '../chips-balance/services/chips-balance/chips-balance.service';
-import { MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 
 
 @NgModule({
   declarations: [DashboardContainer],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    ChipsBalanceModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatButtonModule
-  ],
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        ChipsBalanceModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatButtonModule,
+        MatListModule
+    ],
   providers: [
     ChipsBalanceService
   ]

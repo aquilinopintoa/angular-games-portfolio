@@ -1,5 +1,6 @@
 <mat-drawer-container class="dashboard" [hasBackdrop]="true">
   <mat-drawer #drawer
+              class="dashboard__sidenav"
               mode="over"
               position="end">
     <mat-toolbar class="dashboard__toolbar">
@@ -8,11 +9,41 @@
         <mat-icon>chevron_right</mat-icon>
       </button>
     </mat-toolbar>
+    <mat-list>
+      <div mat-subheader>App</div>
+      <mat-nav-list class="dashboard__app-links">
+        <a mat-list-item
+           [routerLink]="link.path"
+           *ngFor="let link of appLinks">
+          {{ link.label }}
+        </a>
+      </mat-nav-list>
+      <mat-divider></mat-divider>
+      <div mat-subheader>Other Apps</div>
+      <mat-nav-list class="dashboard__external-links">
+        <a mat-list-item
+           [href]="link.path"
+           *ngFor="let link of externalLinks">
+          {{ link.label }}
+        </a>
+      </mat-nav-list>
+      <mat-divider></mat-divider>
+      <div class="dashboard__social-links">
+        <a mat-button
+           [href]="link.path"
+           *ngFor="let link of socialLinks">
+          <mat-icon [svgIcon]="link.icon"></mat-icon>
+        </a>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list>
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar class="dashboard__toolbar">
-      <div>
-        <agp-resume-balance></agp-resume-balance>
+      <div class="dashboard__balance-resume-wrapper">
+        <agp-resume-balance
+          (click)="goToDetails()"
+        ></agp-resume-balance>
       </div>
       <button mat-icon-button
               (click)="drawer.toggle()">

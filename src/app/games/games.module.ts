@@ -6,10 +6,10 @@ import { GamesContainer } from './containers/games/games.container';
 import { StoreModule } from '@ngrx/store';
 import * as fromGames from './+state/reducers/games.reducer';
 import { GameCardComponent } from './components/game-card/game-card.component';
-import {MatCardModule, MatIconModule, MatInputModule} from '@angular/material';
+import {MatCardModule, MatGridListModule, MatIconModule, MatInputModule, MatSelectModule} from '@angular/material';
 import { GameFiltersComponent } from './components/game-filters/game-filters.component';
 import { GameDetailsContainer } from './containers/game-details/game-details.container';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +22,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     MatIconModule,
     ReactiveFormsModule,
+    MatSelectModule,
+    MatGridListModule,
   ]
 })
 export class GamesModule { }

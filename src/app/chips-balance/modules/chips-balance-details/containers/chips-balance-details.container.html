@@ -1,7 +1,11 @@
 <div class="chips-balance-details">
-  <div>balance: {{balance | async}}</div>
-  <button mat-icon-button
-          (click)="requestChips()">
-    <mat-icon>add</mat-icon>
+  <div class="mat-display-1">
+    Saldo: {{balance | async}}
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="requestChips()">
+    Pedir 500 fichas
   </button>
 </div>

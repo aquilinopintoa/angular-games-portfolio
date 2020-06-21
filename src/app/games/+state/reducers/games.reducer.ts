@@ -44,6 +44,34 @@ export const initialState: State = {
       description: 'test',
       level: 3,
       img: 'http://stokpic.com/wp-content/uploads/2017/07/Friends-Playing-In-The-Sea-and-Spashing-Water.jpg'
+    },
+    {
+      id: '4 test',
+      name: '4 test',
+      description: 'test',
+      level: 4,
+      img: 'http://stokpic.com/wp-content/uploads/2017/04/Atlantis-Beach-Holiday-Resort-in-The-Bahamas.jpg'
+    },
+    {
+      id: '5 test',
+      name: '5 test',
+      description: 'test',
+      level: 5,
+      img: 'http://stokpic.com/wp-content/uploads/2015/09/Everything-Apple-iMac-iPhone-iPad-Macbook-And-Apple-Watch.jpg'
+    },
+    {
+      id: '6 test',
+      name: '6 test',
+      description: 'test',
+      level: 6,
+      img: 'http://stokpic.com/wp-content/uploads/2016/07/Woman-and-Child-Walking-Through-Mist-At-Sunset-Between-Trees.jpg'
+    },
+    {
+      id: '7 test',
+      name: '7 test',
+      description: 'test',
+      level: 7,
+      img: 'http://stokpic.com/wp-content/uploads/2016/07/Man-Walking-Through-Green-Forest-With-Mist.jpg'
     }
   ]
 };

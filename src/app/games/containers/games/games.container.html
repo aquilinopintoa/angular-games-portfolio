@@ -1,8 +1,16 @@
 <div class="games">
-  <agp-game-filters (contextChanged)="contextChangeHandler($event)"></agp-game-filters>
-  <div class="games__card-wrapper">
-    <agp-game-card *ngFor="let game of games | async" [game]="game"
-                    (click)="goToGameDetails(game.id)">
-    </agp-game-card>
-  </div>
+  <agp-game-filters [context]="context | async"
+                    (contextChanged)="contextChangeHandler($event)">
+  </agp-game-filters>
+  <mat-grid-list rowHeight="200px"
+                 [cols]="columns"
+                 (window:resize)="onResize($event)">
+      <mat-grid-tile *ngFor="let game of games | async; let i = index">
+        <agp-game-card [game]="game"
+                       (click)="goToGameDetails(game.id)"
+                       [ngStyle]="{order: i}"
+        >
+        </agp-game-card>
+      </mat-grid-tile>
+    </mat-grid-list>
 </div>

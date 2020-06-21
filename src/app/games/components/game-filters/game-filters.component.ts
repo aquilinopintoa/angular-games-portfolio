@@ -1,7 +1,11 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {GamesContext} from '../../interfaces/games-context';
-import {debounceTime} from 'rxjs/operators';
+
+const DEFAULT_GAME_CONTEXT: GamesContext = {
+  sort: '',
+  filter: ''
+};
 
 @Component({
   selector: 'agp-game-filters',
@@ -10,18 +14,23 @@ import {debounceTime} from 'rxjs/operators';
 })
 export class GameFiltersComponent implements OnInit {
 
-  form = new FormGroup({
-    filter: new FormControl(''),
-    sort: new FormControl('level')
-  });
+  form: FormGroup;
+
+  @Input() context: GamesContext;
 
   @Output() contextChanged = new EventEmitter<GamesContext>();
 
   constructor() { }
 
   ngOnInit() {
+    this.context = this.context || DEFAULT_GAME_CONTEXT;
+
+    this.form =  new FormGroup({
+      filter: new FormControl(this.context.filter || ''),
+      sort: new FormControl(this.context.sort || '')
+    });
+
     this.form.valueChanges
-      .pipe(debounceTime(0.5 * 1000))
       .subscribe(() => {
         this.contextChanged.emit(this.form.value);
       });

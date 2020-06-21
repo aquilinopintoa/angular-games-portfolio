@@ -1,3 +1,17 @@
-<div>
-  {{game | async | json}}
-</div>
+<ng-container class="game-details"
+              *ngIf="game | async as loadedGame">
+  <div class="game-details__img">
+    <img [src]="loadedGame.img" alt="game image">
+  </div>
+  <div class="game-details__details">
+    <div class="mat-h1">
+      {{ loadedGame.name }}
+    </div>
+    <div class="mat-h3">
+      {{ loadedGame.description }}
+    </div>
+    <div class="mat-h3">
+      nivel: {{ loadedGame.level }}
+    </div>
+  </div>
+</ng-container>

@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { GamesContext } from '../../interfaces/games-context';
 import { setGamesContext } from '../../+state/actions/games.actions';
 
+const BREAKPOINT = 700;
+
 @Component({
   selector: 'agp-games',
   templateUrl: './games.container.html',
@@ -22,7 +24,7 @@ export class GamesContainer implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.columns = window.innerWidth <= 700 ? 3 : 6;
+    this.columns = window.innerWidth <= BREAKPOINT ? 3 : 5;
   }
 
   async goToGameDetails(id: string) {
@@ -34,6 +36,6 @@ export class GamesContainer implements OnInit {
   }
 
   onResize($event: Event) {
-    this.columns = ($event.target as Window).innerWidth <= 700 ? 3 : 6;
+    this.columns = ($event.target as Window).innerWidth <= BREAKPOINT ? 3 : 5;
   }
 }

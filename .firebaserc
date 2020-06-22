@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "apinto-frontend-samples"
+  },
+  "targets": {
+    "apinto-frontend-samples": {
+      "hosting": {
+        "angular-games-portfolio": [
+          "apinto-angular-games-portfolio"
+        ]
+      }
+    }
+  }
+}
